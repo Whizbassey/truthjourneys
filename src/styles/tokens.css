@@ -1,0 +1,92 @@
+/* ---------------------------------------------------------------------------
+   LOGOS design tokens.
+
+   Dark (mockup 2a) is the signature theme and therefore the :root default.
+   Light (mockup 1b) applies when the OS asks for it, unless the reader has
+   explicitly chosen dark. An explicit choice always wins over the OS.
+   --------------------------------------------------------------------------- */
+
+:root {
+  --bg: #14110d;
+  --surface: #1a1611;
+  --ink: #ece3d3;
+  --ink-strong: #f3ead9;
+  --ink-muted: #d5c9b4;
+  --ink-subtle: #8a7d68;
+  --accent: #b8955a;
+  --accent-text: #c9a468;
+  --button-bg: #8c6c3c;
+  --button-ink: #f3ead9;
+  --rule: #4a3d2a;
+  --card-border: #6e5733;
+  --verse-band: #6e5733;
+  --verse-band-rule: #8c7248;
+  --footer-bg: #14110d;
+  --masthead-rule: transparent;
+
+  /* Footer sits on near-black in both themes, so its own inks are fixed. */
+  --footer-ink: #d5c9b4;
+  --footer-ink-muted: #a89c88;
+  --footer-accent: #c9a468;
+  --footer-rule: #4a3f31;
+
+  /* Placeholder fill used where a post has no cover image yet. */
+  --placeholder: repeating-linear-gradient(135deg, #231e17 0 10px, #1d1914 10px 20px);
+
+  /* Type ------------------------------------------------------------------ */
+  --font-display: var(--font-cinzel), 'Cinzel', serif;
+  --font-body: var(--font-cormorant), 'Cormorant Garamond', serif;
+  --font-ui: var(--font-jost), 'Jost', sans-serif;
+
+  --track-tight: 0.16em;
+  --track: 0.2em;
+  --track-wide: 0.22em;
+  --track-widest: 0.3em;
+
+  /* Layout ---------------------------------------------------------------- */
+  --page-max: 1280px;
+  --gutter: clamp(22px, 5.6vw, 72px);
+  --measure: 680px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) {
+    --bg: #f4ead8;
+    --surface: #fbf6ec;
+    --ink: #231d16;
+    --ink-strong: #231d16;
+    --ink-muted: #5a4d3c;
+    --ink-subtle: #7a6a52;
+    --accent: #a67c3d;
+    --accent-text: #a67c3d;
+    --button-bg: #a67c3d;
+    --button-ink: #fbf5ea;
+    --rule: #d9c7a4;
+    --card-border: #e0d1b4;
+    --verse-band: #a67c3d;
+    --verse-band-rule: #c29a5c;
+    --footer-bg: #16130f;
+    --masthead-rule: #a67c3d;
+    --placeholder: repeating-linear-gradient(135deg, #e8dcc4 0 10px, #e1d3b8 10px 20px);
+  }
+}
+
+:root[data-theme='light'] {
+  --bg: #f4ead8;
+  --surface: #fbf6ec;
+  --ink: #231d16;
+  --ink-strong: #231d16;
+  --ink-muted: #5a4d3c;
+  --ink-subtle: #7a6a52;
+  --accent: #a67c3d;
+  --accent-text: #a67c3d;
+  --button-bg: #a67c3d;
+  --button-ink: #fbf5ea;
+  --rule: #d9c7a4;
+  --card-border: #e0d1b4;
+  --verse-band: #a67c3d;
+  --verse-band-rule: #c29a5c;
+  --footer-bg: #16130f;
+  --masthead-rule: #a67c3d;
+  --placeholder: repeating-linear-gradient(135deg, #e8dcc4 0 10px, #e1d3b8 10px 20px);
+}
